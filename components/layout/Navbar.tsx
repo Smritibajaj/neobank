@@ -2,7 +2,8 @@ import { useState } from 'react';
 
 const navItems = ['Community', 'Products', 'About Us',];
 
-export default function Navbar() {
+export default function Navbar(props:any) {
+const { handleOpen} = props;
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
@@ -20,7 +21,7 @@ export default function Navbar() {
             ))}
           </div>
 
-          <button className="hidden lg:block bg-primary-lime-green px-7 py-3 rounded-full text-neutral-white text-xs bg-gradient-to-r from-primary-lime-green to-primary-bright-cyan hover:button-brightness focus:outline-none focus:ring ring-green-400">
+          <button className="hidden lg:block bg-primary-lime-green px-7 py-3 rounded-full text-neutral-white text-xs bg-gradient-to-r from-primary-lime-green to-primary-bright-cyan hover:button-brightness focus:outline-none focus:ring ring-green-400" onClick={() => handleOpen()}>
             {'Get Early Access'}
           </button>
 

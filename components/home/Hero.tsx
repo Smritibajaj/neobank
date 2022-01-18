@@ -1,4 +1,5 @@
-export default function Hero() {
+export default function Hero(props:any) {
+  const { handleOpen } = props;
   return (
     <section id="hero" className="relative">
       <div className="bg-header-mobile bg-custom-mobile-header-size absolute w-full h-full bg-no-repeat lg:hidden"></div>
@@ -13,7 +14,7 @@ export default function Hero() {
             <p className="text-neutral-grayish-blue text-xs lg:text-base leading-5 mb-7">
               {'Men are from mars and women from veenus- veenus "Naari" is a specially designed financial system for women from different segments of the country. '}
             </p>
-            <button className="bg-primary-lime-green px-7 py-3 rounded-full text-neutral-white text-xs bg-gradient-to-r from-primary-lime-green to-primary-bright-cyan hover:button-brightness mb-7 focus:outline-none focus:ring ring-green-400">
+            <button className="bg-primary-lime-green px-7 py-3 rounded-full text-neutral-white text-xs bg-gradient-to-r from-primary-lime-green to-primary-bright-cyan hover:button-brightness mb-7 focus:outline-none focus:ring ring-green-400" onClick={() => handleOpen()}>
               {'Get Early Access'}
             </button>
           </div>
